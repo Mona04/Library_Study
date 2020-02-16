@@ -12,6 +12,8 @@
     <ClCompile Include="Util\FileSystem.cpp" />
     <ClCompile Include="Physics\Physics_RigidBody.cpp" />
     <ClCompile Include="Util\Timer.cpp" />
+    <ClCompile Include="Template.cpp" />
+    <ClCompile Include="BoostGraphLib.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -23,5 +25,7 @@
     <ClInclude Include="Util\FileSystem.h" />
     <ClInclude Include="Util\Timer.h" />
     <ClInclude Include="Util\Math_Helper.h" />
+    <ClInclude Include="Template.h" />
+    <ClInclude Include="BoostGraphLib.h" />
   </ItemGroup>
 </Project>

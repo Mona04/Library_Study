@@ -23,7 +23,9 @@
     <None Include="temp.dat" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BoostGraphLib.cpp" />
     <ClCompile Include="Physics\Physics_RigidBody.cpp" />
+    <ClCompile Include="Template.cpp" />
     <ClCompile Include="Util\FileStream.cpp" />
     <ClCompile Include="Util\FileSystem.cpp" />
     <ClCompile Include="pch.cpp">
@@ -35,6 +37,8 @@
     <ClCompile Include="실험용.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BoostGraphLib.h" />
+    <ClInclude Include="Template.h" />
     <ClInclude Include="Util\Math_Helper.h" />
     <ClInclude Include="Physics\Physics_MotionState.h" />
     <ClInclude Include="Physics\Physics_RigidBody.h" />
@@ -153,7 +157,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Lib\BULLET~1\;$(SolutionDir)실험용\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\BULLET~1\;$(SolutionDir)실험용\;$(SolutionDir)..\boost\;$(SolutionDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>

@@ -16,7 +16,7 @@ public:
 	FileStream() = default;
 	~FileStream() = default;
 
-	bool Open(const std::string& path, const StreamMode& mode);
+	bool Open(const std::string& path, const StreamMode& mode, const bool& is = true);
 	void Close();
 
 	//=========================================================
@@ -26,6 +26,7 @@ public:
 		std::is_same<T, char>::value ||
 		std::is_same<T, std::byte>::value ||
 		std::is_same<T, int>::value ||
+		std::is_same<T, _int32>::value ||
 		std::is_same<T, uint>::value ||
 		std::is_same<T, long>::value ||
 		std::is_same<T, unsigned long>::value ||
@@ -54,6 +55,7 @@ public:
 		std::is_same<T, char>::value ||
 		std::is_same<T, std::byte>::value ||
 		std::is_same<T, int>::value ||
+		std::is_same<T, _int32>::value ||
 		std::is_same<T, uint>::value ||
 		std::is_same<T, long>::value ||
 		std::is_same<T, unsigned long>::value ||

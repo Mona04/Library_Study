@@ -1,21 +1,21 @@
 #include "pch.h"
 #include "FileStream.h"
 
-bool FileStream::Open(const std::string& path, const StreamMode& mode)
+bool FileStream::Open(const std::string& path, const StreamMode& mode, const bool& isBinary)
 {
 	this->mode = mode;
 
 	switch (mode)
 	{
 	case StreamMode::Write:
-		out.open(path, std::ios::out | std::ios::binary);
+		out.open(path, isBinary ? std::ios::out | std::ios::binary : std::ios::out);
 		if (out.fail())
 		{
 			return false;
 		}
 		break;
 	case StreamMode::Read:
-		in.open(path, std::ios::in | std::ios::binary);
+		in.open(path);// ?  std::ios::in | std::ios::binary : std::ios::in, 32);
 		if (in.fail())
 		{
 			return false;
