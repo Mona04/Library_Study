@@ -19,11 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BGL\Tree.inl" />
     <None Include="macro.props" />
     <None Include="temp.dat" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BoostGraphLib.cpp" />
+    <ClCompile Include="BGL\BoostGraphEx.cpp" />
     <ClCompile Include="Physics\Physics_RigidBody.cpp" />
     <ClCompile Include="Template.cpp" />
     <ClCompile Include="Util\FileStream.cpp" />
@@ -37,7 +38,8 @@
     <ClCompile Include="실험용.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BoostGraphLib.h" />
+    <ClInclude Include="BGL\BoostGraphEx.h" />
+    <ClInclude Include="BGL\Tree.h" />
     <ClInclude Include="Template.h" />
     <ClInclude Include="Util\Math_Helper.h" />
     <ClInclude Include="Physics\Physics_MotionState.h" />

@@ -69,6 +69,7 @@ struct print_adjacency {
 		typename boost::graph_traits<Graph>::adjacency_iterator ai, ai_end;
 		for (boost::tie(ai, ai_end) = boost::adjacent_vertices(v, g); ai != ai_end; ++ai)
 			std::cout << *ai << " ";
+
 		std::cout << std::endl;
 	}
 	//...

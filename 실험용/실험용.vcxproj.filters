@@ -3,6 +3,7 @@
   <ItemGroup>
     <None Include="macro.props" />
     <None Include="temp.dat" />
+    <None Include="BGL\Tree.inl" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -13,7 +14,7 @@
     <ClCompile Include="Physics\Physics_RigidBody.cpp" />
     <ClCompile Include="Util\Timer.cpp" />
     <ClCompile Include="Template.cpp" />
-    <ClCompile Include="BoostGraphLib.cpp" />
+    <ClCompile Include="BGL\BoostGraphEx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -26,6 +27,7 @@
     <ClInclude Include="Util\Timer.h" />
     <ClInclude Include="Util\Math_Helper.h" />
     <ClInclude Include="Template.h" />
-    <ClInclude Include="BoostGraphLib.h" />
+    <ClInclude Include="BGL\BoostGraphEx.h" />
+    <ClInclude Include="BGL\Tree.h" />
   </ItemGroup>
 </Project>
