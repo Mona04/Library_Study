@@ -2,7 +2,7 @@
 
 template<typename V, typename E>
 inline Tree<V, E>::Tree()
-	: tree(nullptr)
+	: tree(nullptr), nVertex(-1)
 {
 }
 
@@ -19,6 +19,7 @@ inline void Tree<V, E>::Init(std::vector<V>& a_vertex_property, const std::vecto
 	tree = new Graph(a_edge.begin()._Ptr, a_edge.end()._Ptr, a_edge_property.begin()._Ptr, a_vertex_property.size());
 	for (int i = 0; i < a_vertex_property.size(); i++)
 		(*tree)[i] = a_vertex_property[i];
+	nVertex = a_vertex_property.size();
 }
 
 template<typename V, typename E>
@@ -62,13 +63,24 @@ inline void Tree<V, E>::Print()
 }
 
 template<typename V, typename E>
-inline std::vector<void*> Tree<V, E>::GetAdjacentDatas(const Vertex& v)
+inline std::vector<V> Tree<V, E>::GetAdjacentDatas(const V& v_p)
 {
 	adjacency_iter ai, ai_end;
-	std::vector<void*> result;
+	Vertex v = FindVertex(v_p);
+	std::vector<V> result;
 	for (boost::tie(ai, ai_end) = boost::adjacent_vertices(v, *tree); ai != ai_end; ai++)
 	{
-		result.emplace_back((*tree)[*ai].data);
+		result.emplace_back((*tree)[*ai]);
 	}
 	return result;
+}
+
+template<typename V, typename E>
+inline int Tree<V, E>::FindVertex(const V& v)
+{
+	for (int i = 0; i < nVertex; i++)
+		if ((*tree)[i] == v)
+			return i;
+
+	return -1;
 }

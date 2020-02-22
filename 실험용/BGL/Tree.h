@@ -8,6 +8,8 @@ struct MonsterType
 	MonsterType() : name("monster"), data(nullptr) {}
 	MonsterType(const std::string& name, void* data) : name(name), data(data) {}
 	
+	bool operator==(const MonsterType& type) { return name == type.name; }
+
 	std::string name;
 	void* data;
 };
@@ -42,12 +44,14 @@ public:
 	void Clear();
 	void Print();
 
-	std::vector<void*> GetAdjacentDatas(const Vertex& v);
+	std::vector<V> GetAdjacentDatas(const V& v);
+	int FindVertex(const V& v);
 
 	Graph* GetTree() { return tree; }
 
 private:
 	Graph* tree;
+	int nVertex;
 };
 
 

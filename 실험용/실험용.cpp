@@ -14,11 +14,14 @@ void main()
 	std::vector<std::pair<int, int>> edges = {
 		std::pair(0, 1), std::pair(1, 2), std::pair(2, 3), std::pair(2, 4)
 	};
-
+	
 	auto tree = new Tree<MonsterType, Evolution_Condition>();
+
 	{
 		tree->Init(vertex_p, edge_p, edges);
 		tree->Print();
+		for (auto& a : tree->GetAdjacentDatas(MonsterType("snail", nullptr)))
+			std::cout << a.name << std::endl;
 	}
 	delete tree;
 }
